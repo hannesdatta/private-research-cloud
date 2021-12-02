@@ -1,6 +1,6 @@
 # Private Research Cloud
 
-Using VMs in the cloud (e.g., via AWS EC2, or Surf Research Cloud) is an extremely useful way to accelarate one's progress when working on empirical research projects. Yet, setting up the cloud - even in relatively well-managed environments like Surf's Research Cloud - can incur a significant time investment for beginners. Plus, it just doesn't offer some of the flexibility I'm used to when working with clouds like, e.g., EC2.
+Using VMs in the cloud (e.g., via AWS EC2, or Surf Research Cloud) is an extremely useful way to accelarate one's progress when working on empirical research projects. Yet, setting up the cloud - even in relatively well-managed environments like Surf's Research Cloud - can incur a significant time investment for beginners (e.g., lengthy onboarding procedure, comprehensive but daunting documentation). Plus, it just doesn't offer some of the flexibility I'm used to when working with clouds like, e.g., EC2 (e.g., number of CPUs, hard disk space, etc.).
 
 So, the purpose of this project is to, eventually, build a web interface to EC2/RDS at AWS.
 
