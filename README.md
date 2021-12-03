@@ -25,6 +25,7 @@ Comments & feedback appreciated.
 $ pip install Flask
 $ pip install Flask-SQLAlchemy
 $ pip install flask-login
+$ pip install boto3
 ```
 
 - Set environment variables in terminal
