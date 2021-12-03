@@ -28,18 +28,20 @@ $ pip install flask-login
 $ pip install boto3
 ```
 
-- Set environment variables in terminal
+- Set environment variables 
 
+```
+$ export TSH_CLOUD_SECRETKEY=<app_secret_key_here>
+$ export TSH_CLOUD_DATABASE_URI="mysql://<USERNAME>:<PASSWORD>@<URL>/tilburg_science_cloud"
+```
+
+## Development
+
+- Additionally, set these variables:
+    
 ```
 $ export FLASK_APP=cloud
 $ export FLASK_DEBUG=1
-```
-
-or on Windows
-
-```
-$ set FLASK_APP=cloud
-$ set FLASK_DEBUG=1
 ```
 
 - Run the app
@@ -47,3 +49,7 @@ $ set FLASK_DEBUG=1
 ```
 $ flask run
 ```
+
+## Deployment
+
+Followed the Docker tutorial here: https://aws.amazon.com/getting-started/hands-on/serve-a-flask-app/
