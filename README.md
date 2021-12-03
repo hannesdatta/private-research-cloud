@@ -4,13 +4,45 @@ Using VMs in the cloud (e.g., via AWS EC2, or Surf Research Cloud) is an extreme
 
 So, the purpose of this project is to, eventually, build a web interface to EC2/RDS at AWS.
 
+## Features
+
 Features:
 -  I will be able to pre-configure machines for students and coauthors (e.g., with Ubuntu Desktop + RStudio for students, with RStudio Server for coauthors, including some data)
 -  Students and coauthors will be able to start these machines, and login to them to conduct their work; after finishing their work, they can pause the machines again.
 -  I will obtain user- and machine-level billing overviews
 
-Roadmap:
+## Roadmap
 - Currently working on the MVP: https://github.com/hannesdatta/private-research-cloud/milestone/1
 - Future issues/nice-to-have's considered here: https://github.com/hannesdatta/private-research-cloud/milestone/2
 
 Comments & feedback appreciated. 
+
+## Running the App
+
+- Install Flask
+
+```
+$ pip install Flask
+$ pip install Flask-SQLAlchemy
+$ pip install flask-login
+```
+
+- Set environment variables in terminal
+
+```
+$ export FLASK_APP=cloud
+$ export FLASK_DEBUG=1
+```
+
+or on Windows
+
+```
+$ set FLASK_APP=cloud
+$ set FLASK_DEBUG=1
+```
+
+- Run the app
+
+```
+$ flask run
+```
