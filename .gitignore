@@ -1,2 +1,4 @@
 db.sqlite
+**pycache**
 .DS_Store
+secret-ids.txt

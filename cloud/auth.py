@@ -79,7 +79,7 @@ def signup_post():
             user.expiry = expiry
             user.password = generate_password_hash(token, method='sha256')
             db.session.commit()
-            link = 'http://127.0.0.1:5001/start/'+user.email+'/'+token
+            link = request.url_root + 'start/'+user.email+'/'+token
 
             flash('Thanks for being back. An email has been sent w/ your login link!' + link)
 
@@ -89,7 +89,7 @@ def signup_post():
 
             db.session.add(new_user)
             db.session.commit()
-            link = 'http://127.0.0.1:5001/start/'+user.email+'/'+token
+            link = request.url_root + 'start/'+email+'/'+token
 
             flash('An email has been sent w/ your login link: ' + link)
 
