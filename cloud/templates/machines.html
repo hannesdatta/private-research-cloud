@@ -1,0 +1,115 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Tilburg Science Cloud
+</h1>
+<h2 class="subtitle">
+  Scale up your research.
+</h2>
+
+<p>
+  Logged in!<br>
+  </p>
+
+Here are your machines:
+
+<table class="ui celled table">
+  <thead>
+    <tr><th>Name</th>
+    <th>Number of CPUs</th>
+    <th>Memory</th>
+    <th>Status</th>
+    <th>Action</th>
+
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td data-label="Name">R + Python</td>
+      <td data-label="Number of CPUs">24</td>
+      <td data-label="Memory">128 GB</td>
+      <td data-label="Status">Paused</td>
+      <td data-label="Action">
+
+        <div class="ui tiny buttons">
+          <button class="ui button">
+            <i class="stop icon"></i>
+            Stop
+          </button>
+          <button class="ui button">
+            <i class="pause icon"></i>
+            Pause
+          </button>
+          <button class="ui button">
+            <i class="play icon"></i>
+            Start
+          </button>
+          <button class="ui yellow button">
+            <i class="arrow alternate circle right icon"></i>
+            Access
+          </button>
+
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Name">Tobi's Stata workbench</td>
+      <td data-label="Number of CPUs">24</td>
+      <td data-label="Memory">128 GB</td>
+      <td data-label="Status">Running</td>
+      <td data-label="Action">        <div class="ui tiny buttons">
+                <button class="ui button">
+                  <i class="stop icon"></i>
+                  Stop
+                </button>
+                <button class="ui button">
+                  <i class="pause icon"></i>
+                  Pause
+                </button>
+                <button class="ui button">
+                  <i class="play icon"></i>
+                  Start
+                </button>
+                <button class="ui yellow button">
+                  <i class="arrow alternate circle right icon"></i>
+                  Access
+                </button>
+
+              </div></td>
+
+    </tr>
+    <tr>
+      <td data-label="Name">Experimental sandbox</td>
+      <td data-label="Number of CPUs">4</td>
+      <td data-label="Memory">8 GB</td>
+      <td data-label="Status">Paused</td>
+      <td data-label="Action">        <div class="ui tiny buttons">
+                <button class="ui button">
+                  <i class="stop icon"></i>
+                  Stop
+                </button>
+                <button class="ui button">
+                  <i class="pause icon"></i>
+                  Pause
+                </button>
+                <button class="ui button">
+                  <i class="play icon"></i>
+                  Start
+                </button>
+                <button class="ui yellow button">
+                  <i class="arrow alternate circle right icon"></i>
+                  Access
+                </button>
+
+              </div></td>
+
+    </tr>
+  </tbody>
+</table>
+
+<a href=/logout>Logout</a>
+
+
+{% endblock %}

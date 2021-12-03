@@ -23,6 +23,11 @@ def index():
     #else:
     return render_template("index.html")
 
+@main.route('/machines')
+@login_required
+def machines():
+    return render_template("machines.html")
+
 @main.route('/profile')
 @login_required
 def profile():

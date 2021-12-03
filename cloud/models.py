@@ -16,3 +16,5 @@ class User(UserMixin, db.Model):
     name = db.Column(db.String(1000))
     nickname = db.Column(db.String(100))
     type = db.Column(db.String(10))
+    time_created = db.Column(DateTime(timezone=True), server_default=func.now())
+    expiry = db.Column(DateTime(timezone=True))
