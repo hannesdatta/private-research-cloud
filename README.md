@@ -33,6 +33,8 @@ $ pip install boto3
 ```
 $ export TSH_CLOUD_SECRETKEY=<app_secret_key_here>
 $ export TSH_CLOUD_DATABASE_URI="mysql://<USERNAME>:<PASSWORD>@<URL>/tilburg_science_cloud"
+$ export TSH_EMAIL_PASSWORD="SECRET-EMAIL-PASSWORD"
+
 ```
 
 ## Development
