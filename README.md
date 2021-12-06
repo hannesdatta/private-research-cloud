@@ -12,10 +12,8 @@ Features:
 -  I will obtain user- and machine-level billing overviews
 
 ## Roadmap
-- Currently working on the MVP: https://github.com/hannesdatta/private-research-cloud/milestone/1
-- Future issues/nice-to-have's considered here: https://github.com/hannesdatta/private-research-cloud/milestone/2
 
-Comments & feedback appreciated. 
+See [here](https://github.com/hannesdatta/private-research-cloud/milestones) for an overview about the project's milestones and associated issues (to dos). Comments & feedback appreciated. 
 
 ## Running the App
 
