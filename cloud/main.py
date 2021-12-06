@@ -28,7 +28,6 @@ def index():
 @login_required
 def machines():
     vms = VM.query.filter(VM.users.any(id=current_user.id)).all()
-    print(type(vms[0]))
     vmnew = []
     for vm in vms:
         # check status of VM

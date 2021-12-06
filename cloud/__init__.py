@@ -12,7 +12,6 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-    print(os.getenv('TSH_CLOUD_SECRETKEY'))
     app.config['SECRET_KEY'] = os.getenv('TSH_CLOUD_SECRETKEY')
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('TSH_CLOUD_DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

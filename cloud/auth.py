@@ -8,6 +8,7 @@ from . import db
 from random import random
 import math
 from datetime import datetime, timedelta
+from .emailtool import send_mail
 
 auth = Blueprint('auth', __name__)
 
@@ -66,7 +67,7 @@ def signup_post():
     #password = request.form.get('password')
 
     # check if user is authorized:
-    if (email in ['h.datta@tilburguniversity.edu']):
+    if (email in ['h.datta@tilburguniversity.edu', "hannes@datta-online.com"]):
 
         # check whether user exist
         user = User.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
@@ -81,7 +82,9 @@ def signup_post():
             db.session.commit()
             link = request.url_root + 'start/'+user.email+'/'+token
 
-            flash('Thanks for being back. An email has been sent w/ your login link!' + link)
+            send_mail(user.email, "Log in to *Pulse* now!", "Thanks for requesting your MAGIC LINK to log in back to *Pulse*. " + link)
+
+            flash('Thanks for being back. An email has been sent w/ your login link!')
 
         if not user: # create
             new_user = User(email=email, password=generate_password_hash(token, method='sha256'),
@@ -91,9 +94,12 @@ def signup_post():
             db.session.commit()
             link = request.url_root + 'start/'+email+'/'+token
 
-            flash('An email has been sent w/ your login link: ' + link)
+            send_mail(email, "Welcome to Pulse!", "Thanks for using PULSE, Tilburg's tool to help you keep on track with your course work. Please use this MAGIC LINK to login now: " + link)
+
+            flash('An email has been sent w/ your login link! Check your inbox now!')
 
         return redirect(url_for('auth.signup'))
+
     flash('Not authorized. Think this is a mistake? Email h.datta@tilburguniversity.edu!')
 
     #if user: # if a user is found, we want to redirect back to signup page so user can try again
