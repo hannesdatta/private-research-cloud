@@ -52,4 +52,5 @@ $ flask run
 
 ## Deployment
 
-Followed the Docker tutorial here: https://aws.amazon.com/getting-started/hands-on/serve-a-flask-app/
+- Followed the Docker tutorial here: https://aws.amazon.com/getting-started/hands-on/serve-a-flask-app/
+- https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04
