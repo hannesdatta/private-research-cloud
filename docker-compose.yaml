@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    web:
+        build: .
+        ports:
+            - "5005:5000"
+        working_dir: /cloud
+        volumes:
+            - .:/cloud
+        environment:
+            - FLASK_APP=cloud
