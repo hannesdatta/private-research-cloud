@@ -40,7 +40,7 @@ $ export TSH_EMAIL_PASSWORD="SECRET-EMAIL-PASSWORD"
 - Additionally, set these variables:
     
 ```
-$ export FLASK_APP=cloud
+$ export FLASK_APP=app
 $ export FLASK_DEBUG=1
 ```
 
